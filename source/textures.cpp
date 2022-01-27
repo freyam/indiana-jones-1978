@@ -1,4 +1,4 @@
-#include "utilityHeaders/textures.h"
+#include "opengl/textures.h"
 #include <iostream>
 
 Texture2D::Texture2D()

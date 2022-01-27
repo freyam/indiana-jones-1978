@@ -8,7 +8,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #define GLT_IMPLEMENTATION
-#include "utilityHeaders/gltext.h"
+#include "opengl/gltext.h"
 
 #include <bits/stdc++.h>
 #include <iostream>

@@ -1,4 +1,4 @@
-#include "utilityHeaders/global.h"
+#include "opengl/global.h"
 
 color_t COLOR_BLUE = {0.247f, 0.729f, 0.933f};
 color_t COLOR_RED = {0.839f, 0.019f, 0.188f};

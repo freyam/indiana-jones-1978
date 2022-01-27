@@ -1,6 +1,6 @@
 # Project definition
 cmake_minimum_required(VERSION 3.1)
-project(Among-Us)
+project(IJ_1978)
 
 # Source files
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/source")
@@ -45,3 +45,8 @@ endif()
 if (APPLE)
   target_link_libraries(${PROJECT_NAME} "-framework OpenGL")
 endif()
+
+# GLEW
+#pkg_check_modules(GLEW REQUIRED glew)
+#include_directories(${GLEW_INCLUDE_DIRS})
+#target_link_libraries (${PROJECT_NAME} ${GLEW_LIBRARIES})

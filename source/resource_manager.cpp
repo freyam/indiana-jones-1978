@@ -1,25 +1,20 @@
-#include<bits/stdc++.h>
+#include "opengl/resource_manager.h"
+#include <bits/stdc++.h>
+#include <fstream>
 #include <iostream>
 #include <sstream>
-#include <fstream>
-#include "utilityHeaders/resource_manager.h"
 
 using namespace std;
 
-
-
 // Instantiate static variables
-map<string, Shader>       ResourceManager::Shaders;
+map<string, Shader> ResourceManager::Shaders;
 
-
-Shader ResourceManager::LoadShader(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile, string name)
-{
+Shader ResourceManager::LoadShader(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile, string name) {
     Shaders[name] = loadShaderFromFile(vShaderFile, fShaderFile, gShaderFile);
     return Shaders[name];
 }
 
-Shader ResourceManager::GetShader(string name)
-{
+Shader ResourceManager::GetShader(string name) {
     return Shaders[name];
 }
 
@@ -34,21 +29,18 @@ Shader ResourceManager::GetShader(string name)
 //     return Textures[name];
 // }
 
-void ResourceManager::Clear()
-{
-    // (properly) delete all shaders	
+void ResourceManager::Clear() {
+    // (properly) delete all shaders
     for (auto iter : Shaders)
         glDeleteProgram(iter.second.ID);
 }
 
-Shader ResourceManager::loadShaderFromFile(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile)
-{
+Shader ResourceManager::loadShaderFromFile(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile) {
     // 1. retrieve the vertex/fragment source code from filePath
     string vertexCode;
     string fragmentCode;
     string geometryCode;
-    try
-    {
+    try {
         // open files
         ifstream vertexShaderFile(vShaderFile);
         ifstream fragmentShaderFile(fShaderFile);
@@ -63,17 +55,14 @@ Shader ResourceManager::loadShaderFromFile(const char *vShaderFile, const char *
         vertexCode = vShaderStream.str();
         fragmentCode = fShaderStream.str();
         // if geometry shader path is present, also load a geometry shader
-        if (gShaderFile != nullptr)
-        {
+        if (gShaderFile != nullptr) {
             ifstream geometryShaderFile(gShaderFile);
             stringstream gShaderStream;
             gShaderStream << geometryShaderFile.rdbuf();
             geometryShaderFile.close();
             geometryCode = gShaderStream.str();
         }
-    }
-    catch (exception e)
-    {
+    } catch (exception e) {
         cout << "ERROR::SHADER: Failed to read shader files" << endl;
     }
     const char *vShaderCode = vertexCode.c_str();
@@ -85,4 +74,3 @@ Shader ResourceManager::loadShaderFromFile(const char *vShaderFile, const char *
     // cout << "shader compiled succesfully" << endl;
     return shader;
 }
-
