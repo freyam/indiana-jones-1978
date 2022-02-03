@@ -1,0 +1,9 @@
+/home/frey/gh/indiana-jones-1978/CMakeFiles/game.dir
+/home/frey/gh/indiana-jones-1978/CMakeFiles/glad.dir
+/home/frey/gh/indiana-jones-1978/CMakeFiles/edit_cache.dir
+/home/frey/gh/indiana-jones-1978/CMakeFiles/rebuild_cache.dir
+/home/frey/gh/indiana-jones-1978/libraries/glfw/CMakeFiles/edit_cache.dir
+/home/frey/gh/indiana-jones-1978/libraries/glfw/CMakeFiles/rebuild_cache.dir
+/home/frey/gh/indiana-jones-1978/libraries/glfw/src/CMakeFiles/glfw.dir
+/home/frey/gh/indiana-jones-1978/libraries/glfw/src/CMakeFiles/edit_cache.dir
+/home/frey/gh/indiana-jones-1978/libraries/glfw/src/CMakeFiles/rebuild_cache.dir
