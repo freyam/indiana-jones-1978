@@ -3,6 +3,7 @@
 #include "game_object.h"
 #include "resource_manager.h"
 #include "sprite_renderer.h"
+#include "text_renderer.h"
 
 #include <bits/stdc++.h>
 
@@ -14,6 +15,8 @@ SpriteRenderer *Renderer;
 GameObject *IndianaJones;
 const unsigned int MAX_PRIESTS = 10;
 GameObject *Priests[MAX_PRIESTS];
+
+TextRenderer *Text;
 
 Game::Game(unsigned int width, unsigned int height)
     : State(GAME_INTRO), Keys(), Width(width), Height(height) {
@@ -66,10 +69,15 @@ void Game::Init() {
     }
 
     this->light = false;
+    this->timeElapsed = 0;
+
+    Text = new TextRenderer(this->Width, this->Height);
+    Text->Load("src/fonts/OCRAEXT.TTF", 24);
 }
 
 void Game::Update(float dt) {
     this->playerPos = IndianaJones->Position;
+    this->timeElapsed += (dt * 1000);
 
     this->collisionsProofingIndianaJones(dt);
     for (int i = 0; i < this->nPriests; ++i) {
@@ -147,12 +155,23 @@ void Game::Render() {
         for (int i = 0; i < this->nPriests; ++i) {
             Priests[i]->Draw(*Renderer, this->playerPos, this->light);
         }
+
+        std::stringstream ss;
+        ss << "Level: " << this->Level + 1 << "  "
+           << "Priests: " << this->nPriests << "  "
+           << "Time: " << this->timeElapsed / 1000 << "  "
+           << "Score: " << this->Points;
+
+        Text->RenderText(ss.str(), 5.0f, 5.0f, 1.0f);
+
     } else if (this->State == GAME_LOSE) {
+        this->light = false;
         Renderer->DrawSprite(ResourceManager::GetTexture("lose"), glm::vec2(0.0f, 0.0f), glm::vec2(this->Width, this->Height), 0.0f, glm::vec3(1.0f), this->playerPos, this->light);
     } else if (this->State == GAME_WIN) {
+        this->light = false;
         Renderer->DrawSprite(ResourceManager::GetTexture("win"), glm::vec2(0.0f, 0.0f), glm::vec2(this->Width, this->Height), 0.0f, glm::vec3(1.0f), this->playerPos, this->light);
     } else {
-        Renderer->DrawSprite(ResourceManager::GetTexture("intro"), glm::vec2(0.0f, 0.0f), glm::vec2(this->Width, this->Height), 0.0f, glm::vec3(1.0f), this->playerPos, this->light);
+        // Renderer->DrawSprite(ResourceManager::GetTexture("intro"), glm::vec2(0.0f, 0.0f), glm::vec2(this->Width, this->Height), 0.0f, glm::vec3(1.0f), this->playerPos, this->light);
         this->State = GAME_ACTIVE;
     }
 }
@@ -179,9 +198,9 @@ void Game::collisionsProofingIndianaJones(float dt) {
                 if (!box.IsSolid) {
                     box.Destroyed = true;
                     if (this->light)
-                        this->Points += 5;
-                    else
                         this->Points += 10;
+                    else
+                        this->Points += 5;
                 }
 
                 Direction dir = std::get<1>(collision);

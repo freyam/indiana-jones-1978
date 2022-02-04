@@ -10,8 +10,8 @@ uniform int light;
 
 void main()
 {
-    if (length(frag_position - vec4(playerPos, 0.0f, 1.0f)) > 100.0f && light == 1)
-        color = vec4(1.0f);
+    if (length(frag_position - vec4(playerPos, 0.0f, 1.0f)) > 200.0f && light == 1)
+        color = vec4(0.0f);
     else
         color = vec4(spriteColor, 1.0) * texture(sprite, TexCoords);
 }

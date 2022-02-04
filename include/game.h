@@ -35,6 +35,7 @@ public:
     unsigned int WALL_FACTOR;
     unsigned int COIN_FACTOR;
     unsigned int Points;
+    unsigned int timeElapsed;
 
     glm::vec2 playerPos;
     bool light;

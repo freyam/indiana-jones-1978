@@ -2,8 +2,6 @@
 cmake_minimum_required(VERSION 3.1)
 project(IJ78)
 
-set(CMAKE_INSTALL_MESSAGE LAZY)
-
 # Source files
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries")
@@ -53,3 +51,8 @@ endif()
 pkg_check_modules(GLEW REQUIRED glew)
 include_directories(${GLEW_INCLUDE_DIRS})
 target_link_libraries (${PROJECT_NAME} ${GLEW_LIBRARIES})
+
+#ft2
+find_package(Freetype REQUIRED)
+target_link_libraries(${PROJECT_NAME} ${FREETYPE_LIBRARIES})
+target_include_directories(${PROJECT_NAME} PRIVATE ${FREETYPE_INCLUDE_DIRS})

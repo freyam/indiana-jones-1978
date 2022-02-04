@@ -116,12 +116,12 @@ CMakeFiles/IJ78.dir/all: CMakeFiles/glad.dir/all
 CMakeFiles/IJ78.dir/all: libraries/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/frey/gh/indiana-jones-1978/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target IJ78"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/frey/gh/indiana-jones-1978/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target IJ78"
 .PHONY : CMakeFiles/IJ78.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/IJ78.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/frey/gh/indiana-jones-1978/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/frey/gh/indiana-jones-1978/CMakeFiles 30
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/IJ78.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/frey/gh/indiana-jones-1978/CMakeFiles 0
 .PHONY : CMakeFiles/IJ78.dir/rule
@@ -142,7 +142,7 @@ CMakeFiles/IJ78.dir/clean:
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/frey/gh/indiana-jones-1978/CMakeFiles --progress-num=11,12 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/frey/gh/indiana-jones-1978/CMakeFiles --progress-num=12,13 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -168,7 +168,7 @@ CMakeFiles/glad.dir/clean:
 libraries/glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f libraries/glfw/src/CMakeFiles/glfw.dir/build.make libraries/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/glfw/src/CMakeFiles/glfw.dir/build.make libraries/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/frey/gh/indiana-jones-1978/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/frey/gh/indiana-jones-1978/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target glfw"
 .PHONY : libraries/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
