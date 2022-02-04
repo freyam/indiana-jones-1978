@@ -6,22 +6,39 @@
 #include <glad/glad.h>
 
 enum GameState {
+    GAME_INTRO,
     GAME_ACTIVE,
-    GAME_MENU,
+    GAME_LOSE,
     GAME_WIN
 };
-// Initial size of the player paddle
-const glm::vec2 PLAYER_SIZE(100.0f, 20.0f);
-// Initial velocity of the player paddle
-const float PLAYER_VELOCITY(500.0f);
+const glm::vec2 PLAYER_SIZE(32.0f, 32.0f);
+const float PLAYER_VELOCITY(300.0f);
+const float MONSTER_VELOCITY(250.0f);
+
+enum Direction {
+    UP,
+    RIGHT,
+    DOWN,
+    LEFT
+};
+
+typedef std::tuple<bool, Direction, glm::vec2> Collision;
 
 class Game {
 public:
     GameState State;
     bool Keys[1024];
     unsigned int Width, Height;
-    std::vector<GameLevel> Levels;
+    GameLevel ARENA;
     unsigned int Level;
+    unsigned int nPriests;
+    unsigned int WALL_FACTOR;
+    unsigned int COIN_FACTOR;
+    unsigned int Points;
+
+    glm::vec2 playerPos;
+    bool light;
+
     Game(unsigned int width, unsigned int height);
     ~Game();
 
@@ -29,6 +46,20 @@ public:
     void ProcessInput(float dt);
     void Update(float dt);
     void Render();
+
+    void createArena();
+
+    void PriestMovement(GameObject *Priest, float dt);
+
+    void collisionsProofingIndianaJones(float dt);
+    void collisionsProofingPriest(GameObject *Priest, float dt);
+
+    bool levelCompleted();
+    void goToNextLevel();
+
+    void ResetLevel();
+    void ResetPlayer();
+    void Reset();
 };
 
 #endif

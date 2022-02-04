@@ -12,7 +12,7 @@ void key_callback(GLFWwindow *window, int key, int scancode, int action, int mod
 const unsigned int SCREEN_WIDTH = 800;
 const unsigned int SCREEN_HEIGHT = 600;
 
-Game Escape(SCREEN_WIDTH, SCREEN_HEIGHT);
+Game IJ78(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 int main(int argc, char *argv[]) {
     glfwInit();
@@ -24,10 +24,9 @@ int main(int argc, char *argv[]) {
 #endif
     glfwWindowHint(GLFW_RESIZABLE, false);
 
-    GLFWwindow *window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "MyGL", nullptr, nullptr);
+    GLFWwindow *window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Indiana Jones 1978 Limited Edition", nullptr, nullptr);
     glfwMakeContextCurrent(window);
 
-    // Load glad
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
@@ -40,7 +39,7 @@ int main(int argc, char *argv[]) {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    Escape.Init();
+    IJ78.Init();
 
     float deltaTime = 0.0f;
     float lastFrame = 0.0f;
@@ -51,13 +50,13 @@ int main(int argc, char *argv[]) {
         lastFrame = currentFrame;
         glfwPollEvents();
 
-        Escape.ProcessInput(deltaTime);
+        IJ78.ProcessInput(deltaTime);
 
-        Escape.Update(deltaTime);
+        IJ78.Update(deltaTime);
 
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        Escape.Render();
+        IJ78.Render();
 
         glfwSwapBuffers(window);
     }
@@ -72,11 +71,14 @@ void key_callback(GLFWwindow *window, int key, int scancode, int action, int mod
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
 
+    if (key == GLFW_KEY_L && action == GLFW_PRESS && IJ78.State == GAME_ACTIVE)
+        IJ78.light = !IJ78.light;
+
     if (key >= 0 && key < 1024) {
         if (action == GLFW_PRESS)
-            Escape.Keys[key] = true;
+            IJ78.Keys[key] = true;
         else if (action == GLFW_RELEASE)
-            Escape.Keys[key] = false;
+            IJ78.Keys[key] = false;
     }
 }
 

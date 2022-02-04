@@ -1,4 +1,4 @@
-/home/frey/gh/indiana-jones-1978/CMakeFiles/game.dir
+/home/frey/gh/indiana-jones-1978/CMakeFiles/IJ78.dir
 /home/frey/gh/indiana-jones-1978/CMakeFiles/glad.dir
 /home/frey/gh/indiana-jones-1978/CMakeFiles/edit_cache.dir
 /home/frey/gh/indiana-jones-1978/CMakeFiles/rebuild_cache.dir

@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/frey/gh/indiana-jones-1978
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/game.dir/all
+all: CMakeFiles/IJ78.dir/all
 all: CMakeFiles/glad.dir/all
 all: libraries/glfw/all
 .PHONY : all
@@ -73,7 +73,7 @@ preinstall: libraries/glfw/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/game.dir/clean
+clean: CMakeFiles/IJ78.dir/clean
 clean: CMakeFiles/glad.dir/clean
 clean: libraries/glfw/clean
 .PHONY : clean
@@ -109,31 +109,31 @@ libraries/glfw/src/clean: libraries/glfw/src/CMakeFiles/glfw.dir/clean
 .PHONY : libraries/glfw/src/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/game.dir
+# Target rules for target CMakeFiles/IJ78.dir
 
 # All Build rule for target.
-CMakeFiles/game.dir/all: CMakeFiles/glad.dir/all
-CMakeFiles/game.dir/all: libraries/glfw/src/CMakeFiles/glfw.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/frey/gh/indiana-jones-1978/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target game"
-.PHONY : CMakeFiles/game.dir/all
+CMakeFiles/IJ78.dir/all: CMakeFiles/glad.dir/all
+CMakeFiles/IJ78.dir/all: libraries/glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/frey/gh/indiana-jones-1978/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target IJ78"
+.PHONY : CMakeFiles/IJ78.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/game.dir/rule: cmake_check_build_system
+CMakeFiles/IJ78.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/frey/gh/indiana-jones-1978/CMakeFiles 29
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/game.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/IJ78.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/frey/gh/indiana-jones-1978/CMakeFiles 0
-.PHONY : CMakeFiles/game.dir/rule
+.PHONY : CMakeFiles/IJ78.dir/rule
 
 # Convenience name for target.
-game: CMakeFiles/game.dir/rule
-.PHONY : game
+IJ78: CMakeFiles/IJ78.dir/rule
+.PHONY : IJ78
 
 # clean rule for target.
-CMakeFiles/game.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/clean
-.PHONY : CMakeFiles/game.dir/clean
+CMakeFiles/IJ78.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/clean
+.PHONY : CMakeFiles/IJ78.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/glad.dir

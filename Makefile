@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named game
+# Target rules for targets named IJ78
 
 # Build rule for target.
-game: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
-.PHONY : game
+IJ78: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 IJ78
+.PHONY : IJ78
 
 # fast build rule for target.
-game/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
-.PHONY : game/fast
+IJ78/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/build
+.PHONY : IJ78/fast
 
 #=============================================================================
 # Target rules for targets named glad
@@ -184,7 +184,7 @@ src/game.o: src/game.cpp.o
 
 # target to build an object file
 src/game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/game.cpp.o
 .PHONY : src/game.cpp.o
 
 src/game.i: src/game.cpp.i
@@ -192,7 +192,7 @@ src/game.i: src/game.cpp.i
 
 # target to preprocess a source file
 src/game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/game.cpp.i
 .PHONY : src/game.cpp.i
 
 src/game.s: src/game.cpp.s
@@ -200,7 +200,7 @@ src/game.s: src/game.cpp.s
 
 # target to generate assembly for a file
 src/game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
 
 src/game_level.o: src/game_level.cpp.o
@@ -208,7 +208,7 @@ src/game_level.o: src/game_level.cpp.o
 
 # target to build an object file
 src/game_level.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_level.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/game_level.cpp.o
 .PHONY : src/game_level.cpp.o
 
 src/game_level.i: src/game_level.cpp.i
@@ -216,7 +216,7 @@ src/game_level.i: src/game_level.cpp.i
 
 # target to preprocess a source file
 src/game_level.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_level.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/game_level.cpp.i
 .PHONY : src/game_level.cpp.i
 
 src/game_level.s: src/game_level.cpp.s
@@ -224,7 +224,7 @@ src/game_level.s: src/game_level.cpp.s
 
 # target to generate assembly for a file
 src/game_level.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_level.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/game_level.cpp.s
 .PHONY : src/game_level.cpp.s
 
 src/game_object.o: src/game_object.cpp.o
@@ -232,7 +232,7 @@ src/game_object.o: src/game_object.cpp.o
 
 # target to build an object file
 src/game_object.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_object.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/game_object.cpp.o
 .PHONY : src/game_object.cpp.o
 
 src/game_object.i: src/game_object.cpp.i
@@ -240,7 +240,7 @@ src/game_object.i: src/game_object.cpp.i
 
 # target to preprocess a source file
 src/game_object.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_object.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/game_object.cpp.i
 .PHONY : src/game_object.cpp.i
 
 src/game_object.s: src/game_object.cpp.s
@@ -248,7 +248,7 @@ src/game_object.s: src/game_object.cpp.s
 
 # target to generate assembly for a file
 src/game_object.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_object.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/game_object.cpp.s
 .PHONY : src/game_object.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -256,7 +256,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -264,7 +264,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -272,7 +272,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/resource_manager.o: src/resource_manager.cpp.o
@@ -280,7 +280,7 @@ src/resource_manager.o: src/resource_manager.cpp.o
 
 # target to build an object file
 src/resource_manager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/resource_manager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/resource_manager.cpp.o
 .PHONY : src/resource_manager.cpp.o
 
 src/resource_manager.i: src/resource_manager.cpp.i
@@ -288,7 +288,7 @@ src/resource_manager.i: src/resource_manager.cpp.i
 
 # target to preprocess a source file
 src/resource_manager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/resource_manager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/resource_manager.cpp.i
 .PHONY : src/resource_manager.cpp.i
 
 src/resource_manager.s: src/resource_manager.cpp.s
@@ -296,7 +296,7 @@ src/resource_manager.s: src/resource_manager.cpp.s
 
 # target to generate assembly for a file
 src/resource_manager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/resource_manager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/resource_manager.cpp.s
 .PHONY : src/resource_manager.cpp.s
 
 src/shader.o: src/shader.cpp.o
@@ -304,7 +304,7 @@ src/shader.o: src/shader.cpp.o
 
 # target to build an object file
 src/shader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/shader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/shader.cpp.o
 .PHONY : src/shader.cpp.o
 
 src/shader.i: src/shader.cpp.i
@@ -312,7 +312,7 @@ src/shader.i: src/shader.cpp.i
 
 # target to preprocess a source file
 src/shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/shader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/shader.cpp.i
 .PHONY : src/shader.cpp.i
 
 src/shader.s: src/shader.cpp.s
@@ -320,7 +320,7 @@ src/shader.s: src/shader.cpp.s
 
 # target to generate assembly for a file
 src/shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/shader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/shader.cpp.s
 .PHONY : src/shader.cpp.s
 
 src/sprite_renderer.o: src/sprite_renderer.cpp.o
@@ -328,7 +328,7 @@ src/sprite_renderer.o: src/sprite_renderer.cpp.o
 
 # target to build an object file
 src/sprite_renderer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/sprite_renderer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/sprite_renderer.cpp.o
 .PHONY : src/sprite_renderer.cpp.o
 
 src/sprite_renderer.i: src/sprite_renderer.cpp.i
@@ -336,7 +336,7 @@ src/sprite_renderer.i: src/sprite_renderer.cpp.i
 
 # target to preprocess a source file
 src/sprite_renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/sprite_renderer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/sprite_renderer.cpp.i
 .PHONY : src/sprite_renderer.cpp.i
 
 src/sprite_renderer.s: src/sprite_renderer.cpp.s
@@ -344,7 +344,7 @@ src/sprite_renderer.s: src/sprite_renderer.cpp.s
 
 # target to generate assembly for a file
 src/sprite_renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/sprite_renderer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/sprite_renderer.cpp.s
 .PHONY : src/sprite_renderer.cpp.s
 
 src/stb_image.o: src/stb_image.cpp.o
@@ -352,7 +352,7 @@ src/stb_image.o: src/stb_image.cpp.o
 
 # target to build an object file
 src/stb_image.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/stb_image.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/stb_image.cpp.o
 .PHONY : src/stb_image.cpp.o
 
 src/stb_image.i: src/stb_image.cpp.i
@@ -360,7 +360,7 @@ src/stb_image.i: src/stb_image.cpp.i
 
 # target to preprocess a source file
 src/stb_image.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/stb_image.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/stb_image.cpp.i
 .PHONY : src/stb_image.cpp.i
 
 src/stb_image.s: src/stb_image.cpp.s
@@ -368,7 +368,7 @@ src/stb_image.s: src/stb_image.cpp.s
 
 # target to generate assembly for a file
 src/stb_image.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/stb_image.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/stb_image.cpp.s
 .PHONY : src/stb_image.cpp.s
 
 src/texture.o: src/texture.cpp.o
@@ -376,7 +376,7 @@ src/texture.o: src/texture.cpp.o
 
 # target to build an object file
 src/texture.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/texture.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/texture.cpp.o
 .PHONY : src/texture.cpp.o
 
 src/texture.i: src/texture.cpp.i
@@ -384,7 +384,7 @@ src/texture.i: src/texture.cpp.i
 
 # target to preprocess a source file
 src/texture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/texture.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/texture.cpp.i
 .PHONY : src/texture.cpp.i
 
 src/texture.s: src/texture.cpp.s
@@ -392,7 +392,7 @@ src/texture.s: src/texture.cpp.s
 
 # target to generate assembly for a file
 src/texture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/texture.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IJ78.dir/build.make CMakeFiles/IJ78.dir/src/texture.cpp.s
 .PHONY : src/texture.cpp.s
 
 # Help Target
@@ -403,7 +403,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... game"
+	@echo "... IJ78"
 	@echo "... glad"
 	@echo "... glfw"
 	@echo "... libraries/glad/src/glad.o"

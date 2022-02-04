@@ -1,6 +1,8 @@
 # Project definition
 cmake_minimum_required(VERSION 3.1)
-project(game)
+project(IJ78)
+
+set(CMAKE_INSTALL_MESSAGE LAZY)
 
 # Source files
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
